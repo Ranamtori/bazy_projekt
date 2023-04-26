@@ -1,10 +1,10 @@
-package pl.schronisko.zwierzatkaInfo;
+package pl.schronisko.zwierzatkainfo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ZwierzatkaInfoApplicationTests {
+class ZwierzatkainfoApplicationTests {
 
 	@Test
 	void contextLoads() {
