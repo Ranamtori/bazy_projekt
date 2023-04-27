@@ -12,5 +12,4 @@ public class HomeControler {
     {
         return "index";
     }
-
 }
