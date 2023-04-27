@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HomeControler {
     @GetMapping("/")
-    @ResponseBody
+    //@ResponseBody //to jest po to zeby to co w return sie zamienilo na html a jak w return jest plik html to nie trzeba tego
     public String home()
     {
-        return "home page";
+        return "index";
     }
 
 }
