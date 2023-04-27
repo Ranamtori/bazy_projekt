@@ -7,7 +7,7 @@ Relacje w bazie danych:
 -relacja jeden-do-wielu pomiędzy opiekunem a zwierzętami (opiekun może mieć pod opieką wiele zwierząt)
 -relacja jeden-do-jeden pomiędzy zwierzęciem a kartą zdrowia 
 
-Ponadto na stronie jest możliwość zalogowania się (podania hasła) dla pracowników. Daje to dostęp do modyfikacji danych (usuwanie, edytowanie i dodawanie zwierząt oraz ich książeczek zdrowia) oraz dostęp wypełnenia formularza adopcyjnego. Dzięki temu, kiedy oso ba chętna na adopcję zwierzęcia wybierze się do schroniska i odwiedzi wybranego opiekuna będzie mieć możliwośc wypełnienia formularza razem z nim.
+Ponadto na stronie jest możliwość zalogowania się (podania hasła) dla pracowników. Daje to dostęp do modyfikacji danych (usuwanie, edytowanie i dodawanie zwierząt oraz ich książeczek zdrowia) oraz dostęp wypełnenia formularza adopcyjnego. Dzięki temu, kiedy osoba chętna na adopcję zwierzęcia wybierze się do schroniska i odwiedzi wybranego opiekuna będzie mieć możliwośc wypełnienia formularza razem z nim.
 
 Technologie:
 -Springboot
