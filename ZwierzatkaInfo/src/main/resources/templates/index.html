@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-    <div>
+    <div th:each="zwierze:${zwierzeList}"> <!--petla po liscie 3 divy sie zrobia-->
         <p th:text="${zwierze.Imie}"></p> <!--tutaj wstawiam atrybut z kontrolera z backendu dziala-->
     </div>
     <p style="color:green">Zielony napis</p>
