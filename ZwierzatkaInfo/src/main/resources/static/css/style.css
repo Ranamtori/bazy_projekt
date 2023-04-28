@@ -1,3 +1,7 @@
 body{
     background-color: aqua;
 }
+div{
+    letter-spacing: normal;
+    background-color: chartreuse;
+}

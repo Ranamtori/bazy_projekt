@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>schronisko</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
+    <div>
+        <p th:text="${zwierze.Imie}"></p> <!--tutaj wstawiam atrybut z kontrolera z backendu dziala-->
+    </div>
     <p style="color:green">Zielony napis</p>
 </body>
 </html>
