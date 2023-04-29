@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--tu bedzie dodawanie zwierzecia-->
+    <form th:action="@{/admin}" method="post">
+        <label>Id</label>
+        <input type="number" name="Id" required>
+        <label>Imie</label>
+        <input type="text" name="Imie" required>
+        <label>NrKojca</label>
+        <input type="number" name="NrKojca" required>
+        <label>Gatunek</label>
+        <input type="text" name="Gatunek" required>
+        <label>Plec</label>
+        <input type="text" name="Plec" required>
+        <label>Umaszczenie</label>
+        <input type="text" name="Umaszczenie" required>
+        <label>Czy do adopcji</label>
+        <input type="text" name="CzyDoAdopcji" required>
+        <label>Czy akceptuje psy</label>
+        <input type="text" name="CzyPsy" required>
+        <label>Czy akceptuje koty</label>
+        <input type="text" name="CzyKoty" required>
+        <label>Czy akceptuje dzieci</label>
+        <input type="text" name="CzyDzieci" required>
+        <button type="submit">Dodaj</button>
+    </form>
+</body>
+</html>
+<!--public int Id;-->
+<!--public String Imie;-->
+<!--public int NrKojca;-->
+<!--public char Gatunek;//p/k-->
+<!--public char Plec;//k/m-->
+<!--public String Rasa;-->
+<!--public String Umaszczenie;-->
+<!--public String Wielkosc; //maly/sredni/duzy-->
+<!--public boolean CzyDoAdopcji;-->
+<!--public boolean CzyPsy; //czy moze zyc zpsami-->
+<!--public boolean CzyKoty;-->
+<!--public boolean CzyDzieci;-->

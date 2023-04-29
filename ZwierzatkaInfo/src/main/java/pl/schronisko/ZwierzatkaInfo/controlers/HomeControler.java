@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pl.schronisko.ZwierzatkaInfo.model.Zwierze;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -20,15 +21,23 @@ public class HomeControler {
 //    {
 //        return new Zwierze(12,"Pucek",4,'k','m',"dachowiec","czarny","maly",true,false,true,true);
 //    }
-    public List<Zwierze> zwierzeList = List.of(
-            new Zwierze(12,"Pucek",4,'k','m',"dachowiec","czarny","maly",true,false,true,true),
-            new Zwierze(12,"Rico",5,'p','m',"owczarek bernenski","laciaty","duzy",true,false,false,true),
-            new Zwierze(12,"Gucio",6,'p','m',"mieszaniec","czarny","maly",true,false,true,true)
-    );
+    static List<Zwierze> zwierzeList = new ArrayList<>();
+    static
+    {
+        zwierzeList.add(new Zwierze(12,"Pucek",4,'k','m',"dachowiec","czarny","maly",true,false,true,true));
+        zwierzeList.add(new Zwierze(12,"Rico",5,'p','m',"owczarek bernenski","laciaty","duzy",true,false,false,true));
+        zwierzeList.add(new Zwierze(12,"Gucio",6,'p','m',"mieszaniec","czarny","maly",true,false,true,true));
+    }
+
+
     @GetMapping("/")//to trzeba dopiero tu nie przed lista
     public String home(Model model) //dodaje atrybut do modela zeby za pomaca Thymeleaf polaczyc z html
     {
         model.addAttribute("zwierzeList",zwierzeList);
         return "index";
+    }
+
+    public List<Zwierze> getZwierzeList() {
+        return zwierzeList;
     }
 }
