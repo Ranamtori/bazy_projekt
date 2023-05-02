@@ -35,7 +35,7 @@ public class HomeControler {
     {
         List<Zwierze> zwierzeList=zwierzeRepository.findAll();
         model.addAttribute("zwierzeList",zwierzeList);
-        return "index";
+        return "/userview/index";
     }
 
 
