@@ -37,6 +37,4 @@ public class HomeControler {
         model.addAttribute("zwierzeList",zwierzeList);
         return "/userview/index";
     }
-
-
 }
