@@ -37,5 +37,4 @@ public class HomeControler {
         model.addAttribute("zwierzeList", zwierzeList);
         return "/mainview/mainview";
     }
-
 }
