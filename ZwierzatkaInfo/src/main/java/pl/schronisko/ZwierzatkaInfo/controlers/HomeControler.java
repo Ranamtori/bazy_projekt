@@ -33,8 +33,8 @@ public class HomeControler {
     @GetMapping("/")//to trzeba dopiero tu nie przed lista
     public String home(Model model, HttpSession httpSession) //dodaje atrybut do modela zeby za pomaca Thymeleaf polaczyc z html
     {
-        List<Zwierze> zwierzeList=zwierzeRepository.findAll();
-        model.addAttribute("zwierzeList",zwierzeList);
-        return "/userview/index";
+        //List<Zwierze> zwierzeList = zwierzeRepository.findAll();
+        //model.addAttribute("zwierzeList", zwierzeList);
+        return "/mainview/mainview";
     }
 }

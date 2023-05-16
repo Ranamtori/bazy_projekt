@@ -1,7 +1,54 @@
 body{
-    background-color: aqua;
+    background-color: #ebddcd;
+    margin: 0;
 }
+
+h2{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 10px;
+}
+
 div{
     letter-spacing: normal;
-    background-color: chartreuse;
+    background-color: #99B8BF;
 }
+
+header{
+    margin-top: 30px;
+    background-color:#735B56;
+}
+
+.title{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-left: 200px;
+}
+
+.Logo-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 170px;
+    height: 150px;
+}
+
+.button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #594842;
+    color: #F2EEEB;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #af8868;
+}
+
+
