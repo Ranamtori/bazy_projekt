@@ -4,8 +4,8 @@ body{
 }
 
 h2{
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 175px;
+    margin-right: 175px;
     text-align: center;
     font-weight: bold;
     font-size: 40px;
@@ -36,7 +36,7 @@ header{
     height: 150px;
 }
 
-.button {
+.logowanie {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -47,8 +47,63 @@ header{
     border-radius: 4px;
 }
 
-.button:hover {
+.logowanie:hover {
     background-color: #af8868;
 }
 
+.powrót {
+
+    background-color: #594842;
+    color: #F2EEEB;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.powrót:hover {
+    background-color: #af8868;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f3eae3;
+    border-radius: 15px;
+
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-group input {
+    width: 378px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .form-group button {
+    width: 100%;
+    background-color: #204f85;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+  .form-group button:hover {
+    background-color: #99B8BF;
+  }
 

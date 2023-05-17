@@ -30,6 +30,9 @@ public class HomeControler {
     public HomeControler(ZwierzeRepository zwierzeRepository) {
         this.zwierzeRepository = zwierzeRepository;
     }
+
+
+    }
     @GetMapping("/")//to trzeba dopiero tu nie przed lista
     public String home(Model model, HttpSession httpSession) //dodaje atrybut do modela zeby za pomaca Thymeleaf polaczyc z html
     {

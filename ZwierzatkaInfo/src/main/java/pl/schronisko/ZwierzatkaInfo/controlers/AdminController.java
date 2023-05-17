@@ -18,6 +18,7 @@ public class AdminController {
     }
     @GetMapping
     private String adminPage(){
+
         return "adminview/adminHome";
     }
     //metody:

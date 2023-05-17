@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title </title><link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Title </title>
+     <!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> -->
 <!--        laczenie ze style.css, ale na razie jako komentarz bo bede wszystko robic w visualstudio-->
 <!--        wiec chwilowo jest innny link do style.css. pozdrawiam -->
-<!--    <link rel="stylesheet" type="text/css" href="/src/main/resources/static/css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="/src/main/resources/static/css/style.css">
 </head>
 <body>
     <h2 style="color:saddlebrown;"> To jest głowna strona, dzieki niej mozesz sie zalogowac jako admin lub wyszukac zwierzeta </h2>
     <img src="/src/logo.png" alt="Logo-left" class="Logo-left">
     
-    <a href="logowanie.html" class="button">Zaloguj się</a>
+    <a href="logowanie.html" class="logowanie">Zaloguj się</a>
    
     <header>
         <span class="title"></span>
     </header>
 
+    <h3>Wyszukiwarka</h3>
+    <p>Wybierz cechy zwierzaka lub podaj Id konkretnego, którego chcesz wyszukać.</p>
+
+    <!--thymeleaf, na visualu nie dziala-->
+    <div th:each="zwierze:${zwierzeList}"> <!--petla po liscie 3 divy sie zrobia-->
+        <p th:text="${zwierze.Imie}"></p> <!--tutaj wstawiam atrybut z kontrolera z backendu dziala-->
+    </div>
    
 </body>
 </html>
