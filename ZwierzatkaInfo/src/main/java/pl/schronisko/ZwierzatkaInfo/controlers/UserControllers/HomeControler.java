@@ -1,4 +1,4 @@
-package pl.schronisko.ZwierzatkaInfo.controlers;
+package pl.schronisko.ZwierzatkaInfo.controlers.UserControllers;
 
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +32,6 @@ public class HomeControler {
     }
 
 
-    }
     @GetMapping("/")//to trzeba dopiero tu nie przed lista
     public String home(Model model, HttpSession httpSession) //dodaje atrybut do modela zeby za pomaca Thymeleaf polaczyc z html
     {

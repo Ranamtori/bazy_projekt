@@ -1,4 +1,4 @@
-package pl.schronisko.ZwierzatkaInfo.controlers;
+package pl.schronisko.ZwierzatkaInfo.controlers.AdminControllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,11 +9,11 @@ import pl.schronisko.ZwierzatkaInfo.model.Zwierze;
 import pl.schronisko.ZwierzatkaInfo.repository.ZwierzeRepository;
 
 @Controller
-@RequestMapping("/admin")
-public class AdminController {
+@RequestMapping("/adminHomeA")
+public class AdminHomeController {
     private final ZwierzeRepository zwierzeRepository;
     @Autowired
-    public AdminController(ZwierzeRepository zwierzeRepository) {
+    public AdminHomeController(ZwierzeRepository zwierzeRepository) {
         this.zwierzeRepository = zwierzeRepository;
     }
     @GetMapping
