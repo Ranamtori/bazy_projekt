@@ -9,16 +9,15 @@ import pl.schronisko.ZwierzatkaInfo.model.Zwierze;
 import pl.schronisko.ZwierzatkaInfo.repository.ZwierzeRepository;
 
 @Controller
-@RequestMapping("/adminHome")
+
 public class AdminHomeController {
     private final ZwierzeRepository zwierzeRepository;
     @Autowired
     public AdminHomeController(ZwierzeRepository zwierzeRepository) {
         this.zwierzeRepository = zwierzeRepository;
     }
-    @GetMapping
+    @GetMapping("/adminHome")
     private String adminPage(){
-
         return "adminview/adminHome";
     }
     //metody:
@@ -27,11 +26,12 @@ public class AdminHomeController {
     //delete - usuwanie zasobu
     //put - aktualizacja istniejacego zasobu lub dodoanie nowego jesli nie sistnieje
     //patch (tak jak put) ale nie przesyla calego obiektu tylk odane do aktualizacji
-    @PostMapping
+
+    @PostMapping("/adminHome")
     private String addZwierze(Zwierze zwierze)
     {
         //po przechwyceniu danych z formularza dodajemy do listy z home controller
         zwierzeRepository.save(zwierze);
-        return "redirect:/"; //sie wykona ta home po tym
+        return "redirect:/adminHome"; //sie wykona ta home po tym
     }
 }

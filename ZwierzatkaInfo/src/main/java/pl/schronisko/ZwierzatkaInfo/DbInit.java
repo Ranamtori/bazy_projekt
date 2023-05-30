@@ -23,10 +23,8 @@ public class DbInit implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-    zwierzeRepository.saveAll(List.of(
-            new Zwierze("Pucek",4, "kot",'m',"dachowiec","czarny","maly","tak","tak","tak","tak"),
-            new Zwierze("Rico",5, "pies",'m',"owczarek bernenski","laciaty","duzy","tak","nie","nie","tak"),
-            new Zwierze("Gucio",6, "pies",'m',"mieszaniec","czarny","maly","tak","nie","tak","tak")
-    ));
+//    zwierzeRepository.saveAll(List.of(
+//
+//    ));
     }
 }
