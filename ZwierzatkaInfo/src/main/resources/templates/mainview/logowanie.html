@@ -8,6 +8,7 @@
     <title>Panel logowania</title>
 </head>
 <body>
+<!--ogarnac linki zeby dizalaly z odpalona aplikacja!!!!!!!!!!!!!!!-->
     <img src="/src/logo.png" alt="Logo-left" class="Logo-left">
     <h2 style="color:saddlebrown;">Panel logowania</h2>
     <center>
@@ -25,10 +26,11 @@
         <form th:action="@{/logowanie/mainview/form}" method="post">
           <div class="form-group">
               <label for="password">Hasło:</label>
-              <input type="password" id="password" name="password" required th:field="${haslo}">
+              <input type="password" id="password" name="password" required th:value="${haslo}">
+
           </div>
           <div class="form-group">
-            <button type="submit">Zaloguj</button>
+            <button type="submit"th:action="@{/logowanie/submintForm}">Zaloguj</button>
           </div>
         </form>
       </div>

@@ -9,7 +9,7 @@ import pl.schronisko.ZwierzatkaInfo.model.Zwierze;
 import pl.schronisko.ZwierzatkaInfo.repository.ZwierzeRepository;
 
 @Controller
-@RequestMapping("/adminHomeA")
+@RequestMapping("/adminHome")
 public class AdminHomeController {
     private final ZwierzeRepository zwierzeRepository;
     @Autowired
@@ -31,7 +31,6 @@ public class AdminHomeController {
     private String addZwierze(Zwierze zwierze)
     {
         //po przechwyceniu danych z formularza dodajemy do listy z home controller
-
         zwierzeRepository.save(zwierze);
         return "redirect:/"; //sie wykona ta home po tym
     }
