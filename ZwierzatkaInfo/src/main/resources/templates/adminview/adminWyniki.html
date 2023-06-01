@@ -7,5 +7,11 @@
 </head>
 <body>
       <p>tu beda wyniki wyszukania (kilka mini panelow zwierzat) pasujacych do kryteriow</p>
+      <div th:each="zwierze:${zwierzeList}"> <!--petla po liscie 3 divy sie zrobia-->
+          <p th:text="${zwierze.Imie}"></p> <!--tutaj wstawiam atrybut z kontrolera z backendu dziala-->
+          <form action="/zwierzeAdmin" method="GET">
+              <button type="submit">dokladniejszy panel zierzaka</button>
+          </form>
+      </div>
 </body>
 </html>

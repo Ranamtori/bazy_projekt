@@ -25,16 +25,19 @@
 <body>
     <h2 style="color:saddlebrown;"> To jest głowna strona, dzieki niej mozesz sie zalogowac jako admin lub wyszukac zwierzeta </h2>
     <img src="/src/logo.png" alt="Logo-left" class="Logo-left">
-    
-    <a href="/logowanie.html" class="logowanie">Zaloguj się</a>
-   
+
+    <form action="/logowaniemain" method="GET">
+        <button type="submit">Zaloguj</button>
+    </form>
     <header>
         <span class="title"></span>
     </header>
 
     <h3>Wyszukiwarka</h3>
     <p>Wybierz cechy zwierzaka lub podaj Id konkretnego, którego chcesz wyszukać.</p>
-
+    <form action="/wyniki" method="GET">
+        <button type="submit">wyszukaj</button>
+    </form>
     <!--thymeleaf, na visualu nie dziala-->
     <div th:each="zwierze:${zwierzeList}"> <!--petla po liscie 3 divy sie zrobia-->
         <p th:text="${zwierze.Imie}"></p> <!--tutaj wstawiam atrybut z kontrolera z backendu dziala-->

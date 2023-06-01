@@ -8,7 +8,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class MainviewController {
     @RequestMapping(method = RequestMethod.GET)
-    public String logowaniePage() {
+    public String mainPage() {
         return "mainview/mainview";
     }
+
+    @RequestMapping(value = "/logowaniemain", method = RequestMethod.GET)
+    public String loginPage() {
+        return "mainview/logowanie";
+    }
+//    @RequestMapping(value = "/wyniki", method = RequestMethod.GET)
+//    public String wyszukajPage() {
+//        return "userview/Wyniki";
+//    }
 }
+

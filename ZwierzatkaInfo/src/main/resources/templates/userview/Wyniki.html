@@ -9,6 +9,9 @@
 <p>Strona z wynikami wyszukiwania</p>
 <div th:each="zwierze:${zwierzeList}"> <!--petla po liscie 3 divy sie zrobia-->
   <p th:text="${zwierze.Imie}"></p> <!--tutaj wstawiam atrybut z kontrolera z backendu dziala-->
+  <form action="/zwierze" method="GET">
+    <button type="submit">dokladniejszy panel zierzaka</button>
+  </form>
 </div>
 
 <p style="color:green">Zielony napis</p>
