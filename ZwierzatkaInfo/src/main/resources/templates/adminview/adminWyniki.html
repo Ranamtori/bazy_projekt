@@ -6,12 +6,13 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css"> //laczenie ze style.css
 </head>
 <body>
-      <p>tu beda wyniki wyszukania (kilka mini panelow zwierzat) pasujacych do kryteriow</p>
-      <div th:each="zwierze:${zwierzeList}"> <!--petla po liscie 3 divy sie zrobia-->
-          <p th:text="${zwierze.Imie}"></p> <!--tutaj wstawiam atrybut z kontrolera z backendu dziala-->
-          <form action="/zwierzeAdmin" method="GET">
-              <button type="submit">dokladniejszy panel zierzaka</button>
-          </form>
-      </div>
+    <div th:each="zwierze:${zwierzeList}">
+        <p th:text="${zwierze.imie}"></p>
+        <form th:action="@{/zwierzeAdmin}" method="GET">
+            <input type="hidden" th:name="id" th:value="${zwierze.id}" />
+            <button type="submit">dokładniejszy panel zwierzaka</button>
+        </form>
+    </div>
+
 </body>
 </html>

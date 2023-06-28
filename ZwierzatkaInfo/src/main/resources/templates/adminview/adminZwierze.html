@@ -6,9 +6,41 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css"> //laczenie ze style.css
 </head>
 <body>
-      <p>tutaj bedzie panel zwierzaka (ten z wiecje info) i mozliwosscia wypelnienia fromularza</p>
-    <button>Edytuj </button> <p>tu mozna dac tak zeby fajnie sie zamianialy pola wyswietlania info zeby m
-      mozna ylo je edytowac</p>
+    <h1>Ogólne informacje:</h1>
+    <p th:text="${zwierze.imie}"></p>
+
+    <p>Gatunek</p>
+    <p th:text="${zwierze.Gatunek}"></p>
+
+    <p>Rasa:</p>
+    <p th:text="${zwierze.getRasa()}"></p>
+
+    <p>Umaszczenie:</p>
+    <p th:text="${zwierze.getUmaszczenie()}"></p>
+
+    <p>Wielkosc:</p>
+    <p th:text="${zwierze.getWielkosc()}"></p>
+
+
+    <p>Płeć:</p>
+    <p th:text="${zwierze.getPlec()}"></p>
+
+    <p>Czy do adopcji: </p>
+    <p th:text="${zwierze.CzyDoAdopcji}"></p>
+
+    <p>Czy akceptuje dzieci:</p>
+    <p th:text="${zwierze.CzyDzieci}"></p>
+
+    <p>Czy akceptuje koty:</p>
+    <p th:text="${zwierze.CzyKoty}"></p>
+
+    <p>Czy akceptuje psy:</p>
+    <p th:text="${zwierze.CzyPsy}"></p>
+
+    <p>Numer kojca:</p>
+    <p th:text="${zwierze.getNrKojca()}"></p>
+
+    
     <button>Usuń</button>
 </body>
 </html>

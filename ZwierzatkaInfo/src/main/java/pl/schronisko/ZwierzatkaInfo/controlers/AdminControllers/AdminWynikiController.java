@@ -10,6 +10,8 @@ import pl.schronisko.ZwierzatkaInfo.repository.ZwierzeRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+
 @Controller
 public class AdminWynikiController {
     private final ZwierzeRepository zwierzeRepository;
@@ -20,11 +22,18 @@ public class AdminWynikiController {
         this.zwierzeRepository = zwierzeRepository;
     }
 
-    @GetMapping("/adminWyniki")//to trzeba dopiero tu nie przed lista
-    public String wyniki(Model model, HttpSession httpSession) //dodaje atrybut do modela zeby za pomaca Thymeleaf polaczyc z html
-    {
-        List<Zwierze> zwierzeList=zwierzeRepository.findAll();
-        model.addAttribute("zwierzeList",zwierzeList);
+    @GetMapping("/adminWyniki")
+    public String wyniki(Model model, HttpSession httpSession, Zwierze zwierze) {
+        List<Zwierze> zwierzeList = zwierzeRepository.findAll();
+
+        List<Zwierze> pasujaceZwierzeta = zwierzeList.stream()
+                .filter(z -> (zwierze.getId() == null ) || (z.getId() != null && z.getId().equals(zwierze.getId())))
+                .filter(z -> (zwierze.getImie() == null || zwierze.getImie().isEmpty()) || (z.getImie() != null && z.getImie().equals(zwierze.getImie())))
+                .filter(z -> (zwierze.getNrKojca() == null || zwierze.getNrKojca().isEmpty()) || (z.getNrKojca() != null && z.getNrKojca().equals(zwierze.getNrKojca())))
+                .collect(Collectors.toList());
+
+        model.addAttribute("zwierzeList", pasujaceZwierzeta);
         return "adminview/adminWyniki";
-}
+    }
+
 }

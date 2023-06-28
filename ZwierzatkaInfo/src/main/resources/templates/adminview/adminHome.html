@@ -8,15 +8,27 @@
 <body>
     <!--tu bedzie dodawanie zwierzecia-->
     <p>na tej stronie bedzie to samo co na home z mozliwoscia dodawania i usuwania edytowania i wiecej inforamcji i formularz przy kazdym piesku</p>
+
+    <h1>Filtry do wyszukiwania</h1>
+    <form action="/adminWyniki" method="get">
+        <label>Id</label>
+        <input type="text" name="Id" >
+        <label>Imie</label>
+        <input type="text" name="Imie" >
+        <label>NrKojca</label>
+        <input type="number" name="NrKojca">
+        <label>Gatunek</label>
+        <button type="submit">Wyszukaj</button>
+    </form>
     <h1>Dodawanie zwierzecia</h1>
     <form th:action="@{/adminHome}" method="post">
-<!--        tu mozna zrobic zeby bylo do wyboru ladnie sie rozwijalo i id to bedziemy raczej po kolei przydzielac -->
-<!--        <label>Id</label>-->
-<!--        <input type="number" name="Id" required>-->
+        <!--        tu mozna zrobic zeby bylo do wyboru ladnie sie rozwijalo i id to bedziemy raczej po kolei przydzielac -->
+        <!--        <label>Id</label>-->
+        <!--        <input type="number" name="Id" required>-->
         <label>Imie</label>
         <input type="text" name="Imie" required>
         <label>NrKojca</label>
-        <input type="number" name="NrKojca" required>
+        <input type="text" name="NrKojca" required>
         <label>Gatunek</label>
         <input type="text" name="Gatunek" required>
         <label>Plec</label>
@@ -32,10 +44,6 @@
         <label>Czy akceptuje dzieci</label>
         <input type="text" name="CzyDzieci" required>
         <button type="submit">Dodaj</button>
-    </form>
-    <p>twyszukiwarka bla bla bla</p>
-    <form action="/adminWyniki" method="GET">
-        <button type="submit">Wyszukaj</button>
     </form>
 </body>
 </html>
