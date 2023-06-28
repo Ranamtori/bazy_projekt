@@ -21,7 +21,7 @@ public class Zwierze {
     public String Imie;
     public String NrKojca;
     public String Gatunek;//pies/kot
-    public char Plec;//k/m
+    public String Plec;//k/m
     public String Rasa;
     public String Umaszczenie;
     public String Wielkosc; //maly/sredni/duzy
@@ -33,7 +33,7 @@ public class Zwierze {
 
 
     //konstruktor bez id
-    public Zwierze(String imie,String nrKojca, String gatunek, char plec, String rasa, String umaszczenie, String wielkosc, String czyDoAdopcji, String czyPsy, String czyKoty, String czyDzieci) {
+    public Zwierze(String imie,String nrKojca, String gatunek, String plec, String rasa, String umaszczenie, String wielkosc, String czyDoAdopcji, String czyPsy, String czyKoty, String czyDzieci) {
         Imie = imie;
         NrKojca = nrKojca;
         Gatunek = gatunek;

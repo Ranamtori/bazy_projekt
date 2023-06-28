@@ -16,9 +16,6 @@ public class MainviewController {
     public String loginPage() {
         return "mainview/logowanie";
     }
-//    @RequestMapping(value = "/wyniki", method = RequestMethod.GET)
-//    public String wyszukajPage() {
-//        return "userview/Wyniki";
-//    }
+
 }
 

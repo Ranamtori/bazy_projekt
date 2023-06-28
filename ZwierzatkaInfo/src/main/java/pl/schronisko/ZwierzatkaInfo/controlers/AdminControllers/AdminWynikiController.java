@@ -23,7 +23,7 @@ public class AdminWynikiController {
     }
 
     @GetMapping("/adminWyniki")
-    public String wyniki(Model model, HttpSession httpSession, Zwierze zwierze) {
+    public String wynikiAdmin(Model model, HttpSession httpSession, Zwierze zwierze) {
         List<Zwierze> zwierzeList = zwierzeRepository.findAll();
 
         List<Zwierze> pasujaceZwierzeta = zwierzeList.stream()

@@ -32,16 +32,40 @@
     <header>
         <span class="title"></span>
     </header>
+    <h1>Filtry do wyszukiwania</h1>
+    <form action="/Wyniki" method="get">
+        <label>Imie</label>
+        <input type="text" name="Imie" >
 
-    <h3>Wyszukiwarka</h3>
-    <p>Wybierz cechy zwierzaka lub podaj Id konkretnego, którego chcesz wyszukać.</p>
-    <form action="/wyniki" method="GET">
-        <button type="submit">wyszukaj</button>
+        <label>Gatunek</label>
+        <input type="text" name="Gatunek" >
+
+        <label>Płeć:</label>
+        <input type="text" name="Plec" >
+
+        <label>Rasa:</label>
+        <input type="text" name="Rasa" >
+
+        <label>Umaszczenie:</label>
+        <input type="text" name="Umaszczenie" >
+
+        <label>Wielkość:</label>
+        <input type="text" name="Wielkosc" >
+
+        <label>Czy do adopcji:</label>
+        <input type="text" name="CzyDoAdopcjiP" >
+
+        <label>Czy akceptuje psy:</label>
+        <input type="text" name="CzyPsy" >
+
+        <label>Czy akceptuje koty:</label>
+        <input type="text" name="CzyKoty" >
+
+        <label>Czy akceptuje dzieci:</label>
+        <input type="text" name="CzyDzieci" >
+
+        <button type="submit">Wyszukaj</button>
     </form>
-    <!--thymeleaf, na visualu nie dziala-->
-    <div th:each="zwierze:${zwierzeList}"> <!--petla po liscie 3 divy sie zrobia-->
-        <p th:text="${zwierze.Imie}"></p> <!--tutaj wstawiam atrybut z kontrolera z backendu dziala-->
-    </div>
    
 </body>
 </html>
