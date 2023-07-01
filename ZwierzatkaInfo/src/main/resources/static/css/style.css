@@ -3,6 +3,10 @@ body{
     margin: 0;
 }
 
+h1{
+    color: #594842;
+    }
+
 h2{
     margin-left: 175px;
     margin-right: 175px;
@@ -107,3 +111,14 @@ header{
     background-color: #99B8BF;
   }
 
+    formbutton {
+      position: absolute;
+      top: 55px;
+      right: 25px;
+    }
+
+    button {
+      background-color: #af8868;
+      color: white;
+      padding: 10px 20px;
+    }
