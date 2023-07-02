@@ -3,13 +3,18 @@ package pl.schronisko.ZwierzatkaInfo.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @NoArgsConstructor
-//@AllArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -18,22 +23,14 @@ public class Opiekunowie {
     @GeneratedValue //to generuje nastepne id dla kazdego autoinkrementacja
     @Id
     private Long IdOpiekuna;
-    private Long IdZwierzecia;
-    public int IloscPodOpieka;
-    public int Doswiadczenie;
-    public String Imie;//pies/kot
-    public String Nazwisko;
-    public char NrTel;//k/m
+    private int iloscPodOpieka;
+    private int doswiadczenie;
+    private String imie;//pies/kot
+    private String nazwisko;
+    private String nrTel;//k/m
 
+    @OneToMany(mappedBy = "opiekun")
+    private List<Zwierze> zwierzeta;
 
-    public Opiekunowie(Long idOpiekuna, Long idZwierzecia, int iloscPodOpieka, int doswiadczenie, String imie, String nazwisko, char nrTel) {
-        IdOpiekuna = idOpiekuna;
-        IdZwierzecia = idZwierzecia;
-        IloscPodOpieka = iloscPodOpieka;
-        Doswiadczenie = doswiadczenie;
-        Imie = imie;
-        Nazwisko = nazwisko;
-        NrTel = nrTel;
-    }
 
 }

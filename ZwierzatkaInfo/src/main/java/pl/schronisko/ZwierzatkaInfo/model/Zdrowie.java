@@ -1,32 +1,26 @@
 package pl.schronisko.ZwierzatkaInfo.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @NoArgsConstructor
-//@AllArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @Entity
 public class Zdrowie {
     //@jakarta.persistence.Id
-    @GeneratedValue //to generuje nastepne id dla kazdego autoinkrementacja
     @Id
     private Long IdZwierzecia;
-    public char CzySczepiony;
-    public char Choroby;
-    public char Leki;
-
-
-    public Zdrowie(Long idZwierzecia, char czySczepiony, char choroby, char leki) {
-        IdZwierzecia = idZwierzecia;
-        CzySczepiony = czySczepiony;
-        Choroby = choroby;
-        Leki = leki;
-    }
-
+    private String CzySczepiony;
+    private String  Choroby;
+    private String Leki;
+    @OneToOne
+    @JoinColumn(name = "zwierze_id")
+    private Zwierze zwierze;
 }

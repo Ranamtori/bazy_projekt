@@ -38,7 +38,7 @@ public class LogowanieController {
             return "redirect:/adminHome";
         } else {
             model.addAttribute("error", "Błędne hasło");
-            return "redirect:/logowanie";
+            return "redirect:/logowaniemain";
         }
     }
 }

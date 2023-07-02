@@ -9,7 +9,8 @@
     <p>Imie: </p>
     <p th:text="${zwierze.imie}"></p>
 
-    <p>Gatunek: th:text="${zwierze.Gatunek}"></p>
+    <p>Gatunek:</p>
+    <p th:text="${zwierze.Gatunek}"></p>
 
     <p>Rasa:</p>
     <p th:text="${zwierze.getRasa()}"></p>
@@ -38,5 +39,13 @@
 
     <p>Numer kojca:</p>
     <p th:text="${zwierze.getNrKojca()}"></p>
+
+    <h1>Informacje o opiekunie:</h1>
+    <p>Imie</p>
+    <p th:text="${opiekun.imie}"></p>
+    <p>Nazwisko</p>
+    <p th:text="${opiekun.nazwisko}"></p>
+    <p>Numer telefonu</p>
+    <p th:text="${opiekun.nrTel}"></p>
 </body>
 </html>

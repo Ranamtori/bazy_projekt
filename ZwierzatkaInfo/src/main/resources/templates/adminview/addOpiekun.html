@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Wybierz opiekuna zwierzaka:</h1>
+    <div th:each="opiekun:${opiekunList}">
+        <p th:text="${opiekun.imie}"></p>
+        <p th:text="${opiekun.nazwisko}"></p>
+        <p>Ilosc zwierzat pod opieka:</p>
+        <p th:text="${opiekun.iloscPodOpieka}"></p>
+        <form th:action="@{/adminHomeWybranyOpiekun}" method="GET">
+            <input type="hidden" th:name="id_opiekuna" th:value="${opiekun.IdOpiekuna}" />
+            <button type="submit">Wybieram</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -40,6 +40,22 @@
     <p>Numer kojca:</p>
     <p th:text="${zwierze.getNrKojca()}"></p>
 
+    <h1>Informacje o zdrowiu:</h1>
+    <p>Czy szczepiony:</p>
+    <p th:text="${zdrowie.czySczepiony}"></p>
+    <p>Choroby:</p>
+    <p th:text="${zdrowie.choroby}"></p>
+    <p>Leki:</p>
+    <p th:text="${zdrowie.leki}"></p>
+
+
+    <h1>Informacje o opiekunie:</h1>
+    <p>Imie</p>
+    <p th:text="${opiekun.imie}"></p>
+    <p>Nazwisko</p>
+    <p th:text="${opiekun.nazwisko}"></p>
+    <p>Numer telefonu</p>
+    <p th:text="${opiekun.nrTel}"></p>
 
     <button>Usuń</button>
 </body>

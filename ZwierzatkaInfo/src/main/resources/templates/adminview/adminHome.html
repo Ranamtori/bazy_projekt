@@ -21,7 +21,7 @@
         <button type="submit">Wyszukaj</button>
     </form>
     <h1>Dodawanie zwierzecia</h1>
-    <form th:action="@{/adminHome}" method="post">
+    <form th:action="@{/adminHomeZwierze}" method="post">
         <!--        tu mozna zrobic zeby bylo do wyboru ladnie sie rozwijalo i id to bedziemy raczej po kolei przydzielac -->
         <!--        <label>Id</label>-->
         <!--        <input type="number" name="Id" required>-->
@@ -47,6 +47,20 @@
         <input type="text" name="CzyKoty" required>
         <label>Czy akceptuje dzieci</label>
         <input type="text" name="CzyDzieci" required>
+        <button type="submit">Dodaj</button>
+    </form>
+
+
+    <form th:action="@{/adminHomeOpiekun}" method="post">
+        <h1>Dodawanie nowego opiekuna</h1>
+        <label>Imie</label>
+        <input type="text" name="Imie" required>
+        <label>Nazwisko</label>
+        <input type="text" name="Nazwisko" required>
+        <label>Numer telefonu</label>
+        <input type="text" name="NrTel" required>
+        <label>Lata doświadczenia:</label>
+        <input type="number" name="Doswiadczenie" required>
         <button type="submit">Dodaj</button>
     </form>
 </body>
