@@ -3,8 +3,7 @@ package pl.schronisko.ZwierzatkaInfo.controlers.AdminControllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import pl.schronisko.ZwierzatkaInfo.model.Opiekunowie;
 import pl.schronisko.ZwierzatkaInfo.model.Zdrowie;
 import pl.schronisko.ZwierzatkaInfo.model.Zwierze;
@@ -21,6 +20,7 @@ public class AdminZwierzeContreoller {
     private final ZwierzeRepository zwierzeRepository;
     private final OpiekunRepository opiekunRepository;
     private final ZdrowieRepository zdrowieRepository;
+    //private Long id;
 
     static List<Zwierze> zwierzeList = new ArrayList<>();
     @Autowired
@@ -30,14 +30,13 @@ public class AdminZwierzeContreoller {
         this.opiekunRepository = opiekunRepository;
         this.zdrowieRepository = zdrowieRepository;
     }
-
     @GetMapping("/zwierzeAdmin")
     public String home(@RequestParam("id") Long id, Model model) {
         // Pobierz zwierze o podanym id
         Optional<Zwierze> zwierzeOptional = zwierzeRepository.findById(id);
         Optional<Opiekunowie> opiekunOptional = opiekunRepository.findOpiekunByPiesekId(id);
         Optional<Zdrowie> zdrowieOptional = zdrowieRepository.findZdrowieByZwierzeId(id);
-
+        //this.id=id;
         if (zwierzeOptional.isPresent()) {
             Zwierze zwierze = zwierzeOptional.get();
             model.addAttribute("zwierze", zwierze);
@@ -52,4 +51,25 @@ public class AdminZwierzeContreoller {
         }
         return "adminview/adminZwierze";
     }
+    @PostMapping("/usun")
+    public String usunZwierze(@RequestParam("id") Long id, Model model) {
+        if (id != null) {
+            Optional<Zwierze> zwierzeOptional = zwierzeRepository.findById(id);
+            if (zwierzeOptional.isPresent()) {
+                Zwierze zwierze = zwierzeOptional.get();
+
+                // Delete associated "zdrowie" record if it exists
+                if (zwierze.getZdrowie() != null) {
+                    zdrowieRepository.delete(zwierze.getZdrowie());
+                }
+
+                zwierzeRepository.delete(zwierze);
+            }
+        }
+
+        return "redirect:/adminWyniki";
+    }
+
+
+
 }
