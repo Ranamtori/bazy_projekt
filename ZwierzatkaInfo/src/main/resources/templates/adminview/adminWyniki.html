@@ -10,12 +10,13 @@
     <img src="https://i.pinimg.com/564x/4b/55/0e/4b550ed0f77e4681a2d3d5c778b1d0f3.jpg" class="Logo-left">
 
     <center>
-        <a href="/logowaniemain" class="powrót">Powrót na stronę główną</a>
+        <a href="/" class="powrót">Powrót na stronę główną</a>
         <a href="/adminHome" class="powrót">Powrót na stronę główną dla admina</a>
     </center>
     <header>
         <span class="title"></span>
     </header>
+
     <div th:each="zwierze:${zwierzeList}">
         <p th:text="${zwierze.imie}"></p>
         <form th:action="@{/zwierzeAdmin}" method="GET">

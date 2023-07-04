@@ -21,23 +21,18 @@
     Imie:
     <label th:text="${zwierze.imie}"></label>
     <p></p>
-
     Gatunek:
     <label th:text="${zwierze.Gatunek}"></label>
     <p></p>
-
     Rasa:
     <label th:text="${zwierze.getRasa()}"></label>
     <p></p>
-
     Umaszczenie:
     <label th:text="${zwierze.getUmaszczenie()}"></label>
     <p></p>
-
     Wielkosc:
     <label th:text="${zwierze.getWielkosc()}"></label>
     <p></p>
-
     Płeć:
     <label th:text="${zwierze.getPlec()}"></label>
     <p></p>
@@ -67,12 +62,15 @@
 
 
     <h1>Informacje o zdrowiu:</h1>
-    <p>Czy szczepiony:</p>
-    <p th:text="${zdrowie.czySczepiony}"></p>
-    <p>Choroby:</p>
-    <p th:text="${zdrowie.choroby}"></p>
-    <p>Leki:</p>
-    <p th:text="${zdrowie.leki}"></p>
+    Czy szczepiony:
+    <label th:text="${zdrowie.czySczepiony}"></label>
+    <p></p>
+    Choroby:
+    <label :text="${zdrowie.choroby}"></label>
+    <p></p>
+    Leki:
+    <label th:text="${zdrowie.leki}"></label>
+    <p></p>
 
 
     <h3>Informacje o opiekunie:</h3>

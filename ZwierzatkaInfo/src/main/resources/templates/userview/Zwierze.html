@@ -21,23 +21,18 @@
     Imie:
     <label th:text="${zwierze.imie}"></label>
     <p></p>
-
     Gatunek:
     <label th:text="${zwierze.Gatunek}"></label>
     <p></p>
-
     Rasa:
     <label th:text="${zwierze.getRasa()}"></label>
     <p></p>
-
     Umaszczenie:
     <label th:text="${zwierze.getUmaszczenie()}"></label>
     <p></p>
-
     Wielkosc:
     <label th:text="${zwierze.getWielkosc()}"></label>
     <p></p>
-
     Płeć:
     <label th:text="${zwierze.getPlec()}"></label>
     <p></p>
@@ -71,12 +66,13 @@
     <label th:text="${opiekun.imie}"></label>
     <p></p>
     <p>Nazwisko</p>
-    <label :text="${opiekun.nazwisko}"></label>
+    <label th:text="${opiekun.nazwisko}"></label>
     <p></p>
     <p>Numer telefonu</p>
     <label th:text="${opiekun.nrTel}"></label>
     <p></p>
     <img th:src="@{${opiekun.AdresUrlCzlowiek}}">
+
 
 </body>
 </html>
