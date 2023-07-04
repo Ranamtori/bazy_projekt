@@ -40,8 +40,16 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+<<<<<<< HEAD
 
 
+=======
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+>>>>>>> 4df97f2ff3fbdfac462cc004ac243e33b966b938
 	</dependencies>
 
 	<build>

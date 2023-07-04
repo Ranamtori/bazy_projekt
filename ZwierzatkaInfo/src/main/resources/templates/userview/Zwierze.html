@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!--/src/main/resources/static -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
+    <h2 style="color:saddlebrown;"> Tutaj dowiesz się więcej na temat wybranego zwierzaka</h2>
+    <img src="/src/logo.png" alt="Logo-left" class="Logo-left">
+    <center>
+        <a href="/" class="powrót">Powrót na stronę główną</a>
+    </center>
+
+    <header>
+        <span class="title"></span>
+    </header>
+    </form>
+    <form action="przetwarzanie.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="zdjecie">
+        <input type="submit" value="Wyślij">
+    </form>
+
+    <h3>Informacje o zwierzątku:</h3>
     <p>Imie: </p>
     <p th:text="${zwierze.imie}"></p>
 
@@ -40,12 +57,15 @@
     <p>Numer kojca:</p>
     <p th:text="${zwierze.getNrKojca()}"></p>
 
-    <h1>Informacje o opiekunie:</h1>
+    <h3>Informacje o opiekunie:</h3>
     <p>Imie</p>
     <p th:text="${opiekun.imie}"></p>
     <p>Nazwisko</p>
     <p th:text="${opiekun.nazwisko}"></p>
     <p>Numer telefonu</p>
     <p th:text="${opiekun.nrTel}"></p>
+
+
+
 </body>
 </html>

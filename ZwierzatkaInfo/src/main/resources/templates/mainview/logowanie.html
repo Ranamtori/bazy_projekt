@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title </title>
-    <!--   <link rel="stylesheet" type="text/css" href="/css/style.css">-->
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-     <title>Panel logowania</title>
- </head>
- <body>
- <!--ogarnac linki zeby dizalaly z odpalona aplikacja!!!!!!!!!!!!!!!-->
+     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/src/main/resources/static/css/style.css">-->
+    <title>Panel logowania</title>
+</head>
+<body>
+<!--ogarnac linki zeby dizalaly z odpalona aplikacja!!!!!!!!!!!!!!!-->
     <img src="/src/logo.png" alt="Logo-left" class="Logo-left">
     <h2 style="color:saddlebrown;">Panel logowania</h2>
     <center>
@@ -23,6 +23,7 @@
  <!-- info o bledzie -->
  <p th:text="${error}" style="color: red;"></p>
 
+ <center>
     <div class="container">
         <h1>Logowanie </h1>
         <form th:action="@{/logowanie/submitForm}" method="post">
@@ -35,6 +36,7 @@
           </div>
         </form>
       </div>
+  </center>
 
 </body>
 </html>
