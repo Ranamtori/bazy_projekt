@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/src/main/resources/static/css/style.css">
+    <!--/src/main/resources/static -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
     <h2 style="color:saddlebrown;"> Tutaj dowiesz się więcej na temat wybranego zwierzaka</h2>
     <img src="/src/logo.png" alt="Logo-left" class="Logo-left">
     <center>
-        <a href="/" class="powrót">Powrót na stronę główną</a>        
+        <a href="/" class="powrót">Powrót na stronę główną</a>
     </center>
 
     <header>
         <span class="title"></span>
     </header>
+    </form>
+    <form action="przetwarzanie.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="zdjecie">
+        <input type="submit" value="Wyślij">
+    </form>
 
     <h3>Informacje o zwierzątku:</h3>
     <p>Imie: </p>

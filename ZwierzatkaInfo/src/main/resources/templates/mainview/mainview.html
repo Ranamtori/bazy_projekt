@@ -3,55 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Title </title>
-  <!--   <link rel="stylesheet" type="text/css" href="/css/style.css">
-       laczenie ze style.css, ale na razie jako komentarz bo bede wszystko robic w visualstudio
-       wiec chwilowo jest innny link do style.css. pozdrawiam -->
-  <link rel="stylesheet" type="text/css" href="/src/main/resources/static/css/style.css">
+    <!--   <link rel="stylesheet" type="text/css" href="/css/style.css">-->
+    <!--        laczenie ze style.css, ale na razie jako komentarz bo bede wszystko robic w visualstudio-->
+    <!--        wiec chwilowo jest innny link do style.css. pozdrawiam -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
 </head>
 <body>
-    <h2 style="color:saddlebrown;"> To jest głowna strona, dzieki niej mozesz sie zalogowac jako admin lub wyszukac zwierzeta </h2>
-    <img src="/src/logo.png" alt="Logo-left" class="Logo-left">
+<h2 style="color:saddlebrown;"> To jest głowna strona, dzieki niej mozesz sie zalogowac jako admin lub wyszukac zwierzeta </h2>
+<img src="/logo.png" alt="Logo-left" class="Logo-left">
 
-    <a href="/" class="logowanie">Zaloguj</a>
+<center>
+    <a href="/logowaniemain" class="powrót">Zaloguj</a>
+</center>
 
-    <header>
-        <span class="title"></span>
-    </header>
-    <h1>Filtry do wyszukiwania</h1>
-    <form action="/Wyniki" method="get">
-        <label>Imie</label>
-        <input type="text" name="Imie" >
 
-        <label>Gatunek</label>
-        <input type="text" name="Gatunek" >
 
-        <label>Płeć:</label>
-        <input type="text" name="Plec" >
 
-        <label>Rasa:</label>
-        <input type="text" name="Rasa" >
+<header>
+    <span class="title"></span>
+</header>
+<h1>Filtry do wyszukiwania</h1>
+<form action="/Wyniki" method="get">
+    <label>Imie</label>
+    <input type="text" name="Imie" >
 
-        <label>Umaszczenie:</label>
-        <input type="text" name="Umaszczenie" >
+    <label>Gatunek</label>
+    <input type="text" name="Gatunek" >
 
-        <label>Wielkość:</label>
-        <input type="text" name="Wielkosc" >
+    <label>Płeć:</label>
+    <input type="text" name="Plec" >
 
-        <label>Czy do adopcji:</label>
-        <input type="text" name="CzyDoAdopcjiP" ><p></p>
+    <label>Rasa:</label>
+    <input type="text" name="Rasa" >
 
-        <label>Czy akceptuje psy:</label>
-        <input type="text" name="CzyPsy" >
+    <label>Umaszczenie:</label>
+    <input type="text" name="Umaszczenie" >
 
-        <label>Czy akceptuje koty:</label>
-        <input type="text" name="CzyKoty" >
+    <label>Wielkość:</label>
+    <input type="text" name="Wielkosc" >
 
-        <label>Czy akceptuje dzieci:</label>
-        <input type="text" name="CzyDzieci" >
+    <label>Czy do adopcji:</label>
+    <input type="text" name="CzyDoAdopcjiP" ><p></p>
 
-        <button type="submit">Wyszukaj</button>
-    </form>
-   
+    <label>Czy akceptuje psy:</label>
+    <input type="text" name="CzyPsy" >
+
+    <label>Czy akceptuje koty:</label>
+    <input type="text" name="CzyKoty" >
+
+    <label>Czy akceptuje dzieci:</label>
+    <input type="text" name="CzyDzieci" >
+
+    <button type="submit">Wyszukaj</button>
+</form>
+
 </body>
 </html>

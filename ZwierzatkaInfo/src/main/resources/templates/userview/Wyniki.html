@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>schronisko</title>
-  <link rel="stylesheet" type="text/css" href="/src/main/resources/static/css/style.css">
+  <!-- /src/main/resources/static -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
   <h2 style="color:saddlebrown;"> Wyniki wyszukiwania</h2>
@@ -21,7 +22,7 @@
   <form action="/zwierze" method="get">
     <input type="hidden" th:name="id" th:value="${zwierze.id}" >
     <button type="submit">dokładniejszy panel zwierzaka</button>
-  </form>
+
 </div>
 </body>
 </html>
