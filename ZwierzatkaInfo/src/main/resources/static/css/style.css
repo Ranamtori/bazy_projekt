@@ -160,3 +160,10 @@ header{
         justify-content: center; /* Wyśrodkowanie w poziomie */
         align-items: center; /* Wyśrodkowanie w pionie */
     }
+
+    .opiekun {
+      max-width: 300px; /* Maksymalna szerokość zdjęcia */
+      max-height: 300px; /* Maksymalna szerokość zdjęcia */
+      border: 2px solid black; /* Grubość i styl obramowania */
+      padding: 5px; /* Wypełnienie wewnątrz obramowania */
+      }

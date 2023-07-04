@@ -76,11 +76,28 @@
         <input type="text" name="NrTel" required>
         <label>Lata doświadczenia:</label>
         <input type="number" name="Doswiadczenie" required>
-        <label>AdresUrlCzlowiek</label>
-        <input type="text" name="AdresUrlCzlowiek" required>
+        <label>Zdjęcie</label>
+        <input type="text" name="AdresUrlCzlowiek">
 
         <button type="submit">Dodaj</button>
     </form>
+
+    <h1>Opiekunowie: </h1>
+    <center>
+        <div th:each="opiekun:${opiekunList}">
+            <p th:text="${opiekun.imie}"></p>
+            <p th:text="${opiekun.nazwisko}"></p>
+            <p>Numer telefonu</p>
+            <p th:text="${opiekun.nrTel}"></p>
+            <p>Liczba zwierząt pod opieką:</p>
+            <p th:text="${opiekun.iloscPodOpieka}"></p>
+            <img th:src="@{${opiekun.AdresUrlCzlowiek}}" class="opiekun">
+            <form th:action="@{/usunOpiekun}" method="post">
+                <input type="hidden" th:name="idOpiekuna" th:value="${opiekun.IdOpiekuna}" />
+                <button type="submit">Usuń opiekuna</button>
+            </form>
+        </div>
+    </center>
 </body>
 </html>
 

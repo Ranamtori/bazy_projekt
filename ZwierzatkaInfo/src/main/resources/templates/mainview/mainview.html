@@ -55,5 +55,18 @@
     <button type="submit">Wyszukaj</button>
 </form>
 
+<h1>Poznaj naszych opiekunów: </h1>
+<center>
+<div th:each="opiekun:${opiekunList}">
+    <p th:text="${opiekun.imie}"></p>
+    <p th:text="${opiekun.nazwisko}"></p>
+    <p>Numer telefonu</p>
+    <p th:text="${opiekun.nrTel}"></p>
+    <p>Liczba zwierząt pod opieką:</p>
+    <p th:text="${opiekun.iloscPodOpieka}"></p>
+    <img th:src="@{${opiekun.AdresUrlCzlowiek}}" class="opiekun">
+</div>
+</center>
+
 </body>
 </html>
