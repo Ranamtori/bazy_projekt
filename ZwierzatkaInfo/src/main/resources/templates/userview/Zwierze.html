@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2 style="color:saddlebrown;"> Tutaj dowiesz się więcej na temat wybranego zwierzaka</h2>
-    <img src="/src/logo.png" alt="Logo-left" class="Logo-left">
+    <img src="https://i.pinimg.com/564x/4b/55/0e/4b550ed0f77e4681a2d3d5c778b1d0f3.jpg" class="Logo-left">
     <center>
         <a href="/" class="powrót">Powrót na stronę główną</a>
     </center>
@@ -17,61 +17,66 @@
         <span class="title"></span>
     </header>
 
-    <header>
-        <span class="title"></span>
-    </header>
-    </form>
-    <form action="przetwarzanie.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="zdjecie">
-        <input type="submit" value="Wyślij">
-    </form>
-
     <h3>Informacje o zwierzątku:</h3>
-    <p>Imie: </p>
-    <p th:text="${zwierze.imie}"></p>
+    Imie:
+    <label th:text="${zwierze.imie}"></label>
+    <p></p>
 
-    <p>Gatunek:</p>
-    <p th:text="${zwierze.Gatunek}"></p>
+    Gatunek:
+    <label th:text="${zwierze.Gatunek}"></label>
+    <p></p>
 
-    <p>Rasa:</p>
-    <p th:text="${zwierze.getRasa()}"></p>
+    Rasa:
+    <label th:text="${zwierze.getRasa()}"></label>
+    <p></p>
 
-    <p>Umaszczenie:</p>
-    <p th:text="${zwierze.getUmaszczenie()}"></p>
+    Umaszczenie:
+    <label th:text="${zwierze.getUmaszczenie()}"></label>
+    <p></p>
 
-    <p>Wielkosc:</p>
-    <p th:text="${zwierze.getWielkosc()}"></p>
+    Wielkosc:
+    <label th:text="${zwierze.getWielkosc()}"></label>
+    <p></p>
+
+    Płeć:
+    <label th:text="${zwierze.getPlec()}"></label>
+    <p></p>
+    Czy do adopcji:
+    <label th:text="${zwierze.CzyDoAdopcji}"></label>
+    <p></p>
+    Czy akceptuje dzieci:
+    <label th:text="${zwierze.CzyDzieci}"></label>
+    <p></p>
+    Czy akceptuje koty:
+    <label th:text="${zwierze.CzyKoty}"></label>
+    <p></p>
+    Czy akceptuje psy:
+    <label th:text="${zwierze.CzyPsy}"></label>
+    <p></p>
+    Numer kojca:
+    <label th:text="${zwierze.getNrKojca()}"></label>
+    <p></p>
 
 
-    <p>Płeć:</p>
-    <p th:text="${zwierze.getPlec()}"></p>
+    <img th:src="@{${zwierze.AdresUrl1}}">
+    <p></p>
+    <img th:src="@{${zwierze.AdresUrl2}}">
+    <p></p>
+    <img th:src="@{${zwierze.AdresUrl3}}">
+    <p></p>
 
-    <p>Czy do adopcji: </p>
-    <p th:text="${zwierze.CzyDoAdopcji}"></p>
-
-    <p>Czy akceptuje dzieci:</p>
-    <p th:text="${zwierze.CzyDzieci}"></p>
-
-    <p>Czy akceptuje koty:</p>
-    <p th:text="${zwierze.CzyKoty}"></p>
-
-    <p>Czy akceptuje psy:</p>
-    <p th:text="${zwierze.CzyPsy}"></p>
-
-    <p>Numer kojca:</p>
-    <p th:text="${zwierze.getNrKojca()}"></p>
-
-    <img th:src="@{${zwierze.imgUrl1}}">
 
     <h3>Informacje o opiekunie:</h3>
     <p>Imie</p>
-    <p th:text="${opiekun.imie}"></p>
+    <label th:text="${opiekun.imie}"></label>
+    <p></p>
     <p>Nazwisko</p>
-    <p th:text="${opiekun.nazwisko}"></p>
+    <label :text="${opiekun.nazwisko}"></label>
+    <p></p>
     <p>Numer telefonu</p>
-    <p th:text="${opiekun.nrTel}"></p>
-
-
+    <label th:text="${opiekun.nrTel}"></label>
+    <p></p>
+    <img th:src="@{${opiekun.AdresUrlCzlowiek}}">
 
 </body>
 </html>

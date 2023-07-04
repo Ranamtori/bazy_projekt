@@ -153,5 +153,16 @@ header{
 
     p {
       color: #594842;
-      
+      padding: 10px 20px;
+      position: absolute;
+      left 15 px;
+       background-color: #99B8BF;
     }
+
+    .zwierze img{
+      margin-left: 10px;
+      width: 100px; /* Maksymalna szerokość zdjęcia */
+      border: 2px solid black; /* Grubość i styl obramowania */
+      padding: 5px; /* Wypełnienie wewnątrz obramowania */
+    }
+
