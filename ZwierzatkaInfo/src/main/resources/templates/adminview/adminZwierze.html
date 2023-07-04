@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/src/main/resources/static/css/style.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
+    <h2 style="color:saddlebrown;">Informacje na temat wybranego zwierzęcia</h2>
+    <img src="/logo.png" alt="Logo-left" class="Logo-left">
+
+    <center>
+        <a href="/logowaniemain" class="powrót">Powrót na stronę główną</a>
+        <a href="/adminHome" class="powrót">Powrót na stronę główną dla admina</a>
+    </center>
+    <header>
+        <span class="title"></span>
+    </header>
+
     <h1>Ogólne informacje:</h1>
     <p th:text="${zwierze.imie}"></p>
 
@@ -57,10 +68,6 @@
     <p>Numer telefonu</p>
     <p th:text="${opiekun.nrTel}"></p>
 
-    <form th:action="@{/usun}" method="post">
-        <input type="hidden" th:name="id" th:value="${zwierze.id}" />
-        <button type="submit">Usuń</button>
-    </form>
 
 
 </body>

@@ -6,6 +6,16 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
+    <h2 style="color:saddlebrown;">Tutaj mousisz dodać informacje o zdrowiu zwierzaka</h2>
+    <img src="/logo.png" alt="Logo-left" class="Logo-left">
+
+    <center>
+        <a href="/logowaniemain" class="powrót">Powrót na stronę główną</a>
+        <a href="/adminHome" class="powrót">Powrót na stronę główną dla admina</a>
+    </center>
+    <header>
+        <span class="title"></span>
+    </header>
     <form th:action="@{/adminHomeZdrowie}" method="post">
         <h1>Informacje o zdrowiu zwierzaka</h1>
         <label>CzySzczepiony:</label>

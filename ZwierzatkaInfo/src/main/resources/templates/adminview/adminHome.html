@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css"> //laczenie ze style.css
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-    <!--tu bedzie dodawanie zwierzecia-->
-    <p>na tej stronie bedzie to samo co na home z mozliwoscia dodawania i usuwania edytowania i wiecej inforamcji i formularz przy kazdym piesku</p>
+    <h2 style="color:saddlebrown;">Wyszukaj lub  dodaj  zwierzę lub opiekuna</h2>
+    <img src="/logo.png" alt="Logo-left" class="Logo-left">
 
+    <center>
+        <a href="/logowaniemain" class="powrót">Powrót na stronę główną</a>
+    </center>
+    <header>
+        <span class="title"></span>
+    </header>
     <h1>Filtry do wyszukiwania</h1>
     <form action="/adminWyniki" method="get">
         <label>Id</label>
@@ -47,7 +53,10 @@
         <input type="text" name="CzyKoty" required>
         <label>Czy akceptuje dzieci</label>
         <input type="text" name="CzyDzieci" required>
+        <label>urlImg</label>
+        <input type="text" name="imgUrl">
         <button type="submit">Dodaj</button>
+
     </form>
 
 
