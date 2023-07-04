@@ -1,5 +1,6 @@
 package pl.schronisko.ZwierzatkaInfo.controlers.MainControllers;
 
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,13 +8,14 @@ import org.springframework.web.bind.annotation.*;
 import pl.schronisko.ZwierzatkaInfo.repository.HasloRepository;
 
 import java.text.AttributedString;
-
+@Getter
 @Controller
 @RequestMapping("/logowanie")
 public class LogowanieController {
 
     private String haslo;
     private final HasloRepository hasloRepository;
+    private boolean czyZalogowany=false;
 
     @Autowired
     public LogowanieController(HasloRepository hasloRepository) {
@@ -35,6 +37,7 @@ public class LogowanieController {
     public String submitForm(@RequestParam("password") String password, Model model) {
         this.haslo = password;
         if (haslo.equals("haslo")) {
+            czyZalogowany=true;
             return "redirect:/adminHome";
         } else {
             model.addAttribute("error", "Błędne hasło");

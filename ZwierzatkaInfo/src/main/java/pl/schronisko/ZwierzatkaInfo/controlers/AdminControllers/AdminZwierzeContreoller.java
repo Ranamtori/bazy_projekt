@@ -57,7 +57,9 @@ public class AdminZwierzeContreoller {
             Optional<Zwierze> zwierzeOptional = zwierzeRepository.findById(id);
             if (zwierzeOptional.isPresent()) {
                 Zwierze zwierze = zwierzeOptional.get();
-
+                Opiekunowie opiekunowie = zwierze.getOpiekun();
+                opiekunowie.setIloscPodOpieka(opiekunowie.getIloscPodOpieka()-1);
+                opiekunRepository.save(opiekunowie);
                 // Delete associated "zdrowie" record if it exists
                 if (zwierze.getZdrowie() != null) {
                     zdrowieRepository.delete(zwierze.getZdrowie());
