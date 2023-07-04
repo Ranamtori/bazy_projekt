@@ -28,6 +28,7 @@ public class Opiekunowie {
     private String imie;//pies/kot
     private String nazwisko;
     private String nrTel;//k/m
+    private String AdresUrlCzlowiek;
 
     @OneToMany(mappedBy = "opiekun")
     private List<Zwierze> zwierzeta;

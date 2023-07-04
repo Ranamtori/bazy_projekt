@@ -1,13 +1,14 @@
 package pl.schronisko.ZwierzatkaInfo.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 //wykorzystujac lombock ustawiam gonstruktory settery i gettery
 @NoArgsConstructor
-//@AllArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @Entity //dodajemy do klas ktore chcemy odwzorowac na tabele
@@ -27,6 +28,9 @@ public class Zwierze {
     private String CzyPsy; //czy moze zyc zpsami
     private String CzyKoty;
     private String CzyDzieci;
+    private String AdresUrl1;
+    private String AdresUrl2;
+    private String AdresUrl3;
 
     @ManyToOne
     @JoinColumn(name = "opiekun_id")
@@ -35,19 +39,5 @@ public class Zwierze {
     @OneToOne(mappedBy = "zwierze")
     private Zdrowie zdrowie;
 
-    //konstruktor bez id
-    public Zwierze(String imie,String nrKojca, String gatunek, String plec, String rasa, String umaszczenie, String wielkosc, String czyDoAdopcji, String czyPsy, String czyKoty, String czyDzieci) {
-        Imie = imie;
-        NrKojca = nrKojca;
-        Gatunek = gatunek;
-        Plec = plec;
-        Rasa = rasa;
-        Umaszczenie = umaszczenie;
-        Wielkosc = wielkosc;
-        CzyDoAdopcji = czyDoAdopcji;
-        CzyPsy = czyPsy;
-        CzyKoty = czyKoty;
-        CzyDzieci = czyDzieci;
-    }
 
 }

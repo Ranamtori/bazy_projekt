@@ -51,6 +51,11 @@
     <p>Numer kojca:</p>
     <p th:text="${zwierze.getNrKojca()}"></p>
 
+
+    <img th:src="@{${zwierze.AdresUrl1}}">
+
+
+
     <h1>Informacje o zdrowiu:</h1>
     <p>Czy szczepiony:</p>
     <p th:text="${zdrowie.czySczepiony}"></p>
@@ -68,7 +73,10 @@
     <p>Numer telefonu</p>
     <p th:text="${opiekun.nrTel}"></p>
 
-
+    <form th:action="@{/usun}" method="post">
+        <input type="hidden" th:name="id" th:value="${zwierze.id}" />
+        <button type="submit">Usuń</button>
+    </form>
 
 </body>
 </html>
