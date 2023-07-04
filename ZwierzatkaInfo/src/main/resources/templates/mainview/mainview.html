@@ -24,33 +24,45 @@
 <form action="/Wyniki" method="get">
     <label>Imie</label>
     <input type="text" name="Imie" >
-
+    <label>NrKojca</label>
+    <input type="text" name="NrKojca" >
     <label>Gatunek</label>
     <input type="text" name="Gatunek" >
-
-    <label>Płeć:</label>
-    <input type="text" name="Plec" >
-
-    <label>Rasa:</label>
-    <input type="text" name="Rasa" >
-
-    <label>Umaszczenie:</label>
+    <label>Plec</label>
+    <select name="Plec" required>
+        <option value="samiec">Samiec</option>
+        <option value="samica">Samica</option>
+    </select>
+    <label>Umaszczenie</label>
     <input type="text" name="Umaszczenie" >
-
-    <label>Wielkość:</label>
-    <input type="text" name="Wielkosc" >
-
-    <label>Czy do adopcji:</label>
-    <input type="text" name="CzyDoAdopcjiP" >
-
-    <label>Czy akceptuje psy:</label>
-    <input type="text" name="CzyPsy">
-
-    <label>Czy akceptuje koty:</label>
-    <input type="text" name="CzyKoty" >
-
-    <label>Czy akceptuje dzieci:</label>
-    <input type="text" name="CzyDzieci" >
+    <label>Rasa</label>
+    <input type="text" name="Rasa" >
+    <label>Wielkosc</label>
+    <select name="Wielkosc" >
+        <option value="maly">mały</option>
+        <option value="sredni">średni</option>
+        <option value="duży">duży</option>
+    </select>
+    <label>Czy do adopcji</label>
+    <select name="CzyDoAdopcji" >
+        <option value="true">Tak</option>
+        <option value="false">Nie</option>
+    </select>
+    <label>Czy akceptuje psy</label>
+    <select name="CzyPsy" >
+        <option value="true">Tak</option>
+        <option value="false">Nie</option>
+    </select>
+    <label>Czy akceptuje koty</label>
+    <select name="CzyKoty" >
+        <option value="true">Tak</option>
+        <option value="false">Nie</option>
+    </select>
+    <label>Czy akceptuje dzieci</label>
+    <select name="CzyDzieci" >
+        <option value="true">Tak</option>
+        <option value="false">Nie</option>
+    </select>
 
     <button type="submit">Wyszukaj</button>
 </form>

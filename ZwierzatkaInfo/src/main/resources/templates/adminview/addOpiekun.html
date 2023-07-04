@@ -22,7 +22,7 @@
         <p th:text="${opiekun.nazwisko}"></p>
         <p>Ilosc zwierzat pod opieka:</p>
         <p th:text="${opiekun.iloscPodOpieka}"></p>
-        <img th:src="@{${opiekun.AdresUrlCzlowiek}}">
+        <img th:src="@{${opiekun.AdresUrlCzlowiek}}" class="opiekun">
         <form th:action="@{/adminHomeWybranyOpiekun}" method="GET">
             <input type="hidden" th:name="id_opiekuna" th:value="${opiekun.IdOpiekuna}" />
             <button type="submit">Wybieram</button>

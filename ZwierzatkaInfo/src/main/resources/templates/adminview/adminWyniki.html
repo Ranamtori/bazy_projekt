@@ -21,7 +21,10 @@
         <p th:text="${zwierze.imie}"></p>
         <form th:action="@{/zwierzeAdmin}" method="GET">
             <input type="hidden" th:name="id" th:value="${zwierze.id}" />
-            <button type="submit">dokładniejszy panel zwierzaka</button>
+            <center>
+                <button type="submit">dokładniejszy panel zwierzaka</button>
+            </center>
+
         </form>
     </div>
 

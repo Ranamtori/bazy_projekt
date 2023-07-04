@@ -27,12 +27,11 @@
         <button type="submit">Wyszukaj</button>
     </form>
 
-
+    <!--        tu mozna zrobic zeby bylo do wyboru ladnie sie rozwijalo i id to bedziemy raczej po kolei przydzielac -->
+    <!--        <label>Id</label>-->
+    <!--        <input type="number" name="Id" required>-->
     <h1>Dodawanie zwierzecia</h1>
     <form th:action="@{/adminHomeZwierze}" method="post">
-        <!--        tu mozna zrobic zeby bylo do wyboru ladnie sie rozwijalo i id to bedziemy raczej po kolei przydzielac -->
-        <!--        <label>Id</label>-->
-        <!--        <input type="number" name="Id" required>-->
         <label>Imie</label>
         <input type="text" name="Imie" required>
         <label>NrKojca</label>
@@ -40,31 +39,48 @@
         <label>Gatunek</label>
         <input type="text" name="Gatunek" required>
         <label>Plec</label>
-        <input type="text" name="Plec" required>
+        <select name="Plec" required>
+            <option value="samiec">Samiec</option>
+            <option value="samica">Samica</option>
+        </select>
         <label>Umaszczenie</label>
         <input type="text" name="Umaszczenie" required>
         <label>Rasa</label>
         <input type="text" name="Rasa" required>
         <label>Wielkosc</label>
-        <input type="text" name="Wielkosc" required>
+        <select name="Wielkosc" required>
+            <option value="maly">mały</option>
+            <option value="sredni">średni</option>
+            <option value="duży">duży</option>
+        </select>
         <label>Czy do adopcji</label>
-        <input type="text" name="CzyDoAdopcji" required>
+        <select name="CzyDoAdopcji" required>
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+        </select>
         <label>Czy akceptuje psy</label>
-        <input type="text" name="CzyPsy" required>
+        <select name="CzyPsy" required>
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+        </select>
         <label>Czy akceptuje koty</label>
-        <input type="text" name="CzyKoty" required>
+        <select name="CzyKoty" required>
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+        </select>
         <label>Czy akceptuje dzieci</label>
-        <input type="text" name="CzyDzieci" required>
-        <label>urlImg1</label>
+        <select name="CzyDzieci" required>
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+        </select>
+        <label>Zdjęcie1</label>
         <input type="text" name="AdresUrl1" required>
-        <label>urlImg2</label>
+        <label>Zdjęcie2</label>
         <input type="text" name="AdresUrl2">
-        <label>urlImg3</label>
+        <label>Zdjęcie3</label>
         <input type="text" name="AdresUrl3">
         <button type="submit">Dodaj</button>
-
     </form>
-
 
     <form th:action="@{/adminHomeOpiekun}" method="post">
         <h1>Dodawanie nowego opiekuna</h1>

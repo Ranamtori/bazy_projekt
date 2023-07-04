@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <!--/src/main/resources/static -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
@@ -17,7 +16,8 @@
         <span class="title"></span>
     </header>
 
-    <h3>Informacje o zwierzątku:</h3>
+    <h1 class="naglowek">Informacje o zwierzątku:</h1>
+    <div class="zwierzeinfo">
     Imie:
     <label th:text="${zwierze.imie}"></label>
     <p></p>
@@ -51,28 +51,25 @@
     Numer kojca:
     <label th:text="${zwierze.getNrKojca()}"></label>
     <p></p>
+    </div>
 
+    <img th:src="@{${zwierze.AdresUrl1}}" class="zdjecie1">
+    <p></p>
+    <img th:src="@{${zwierze.AdresUrl2}}" class="zdjecie2">
+    <p></p>
+    <img th:src="@{${zwierze.AdresUrl3}}" class="zdjecie3">
+    <p></p>
 
-    <img th:src="@{${zwierze.AdresUrl1}}">
-    <p></p>
-    <img th:src="@{${zwierze.AdresUrl2}}">
-    <p></p>
-    <img th:src="@{${zwierze.AdresUrl3}}">
-    <p></p>
-
-
-    <h3>Informacje o opiekunie:</h3>
-    <p>Imie</p>
-    <label th:text="${opiekun.imie}"></label>
-    <p></p>
-    <p>Nazwisko</p>
-    <label th:text="${opiekun.nazwisko}"></label>
-    <p></p>
-    <p>Numer telefonu</p>
-    <label th:text="${opiekun.nrTel}"></label>
-    <p></p>
-    <img th:src="@{${opiekun.AdresUrlCzlowiek}}">
-
+    <center>
+    <h1 class="naglowek">Informacje o opiekunie:</h1>
+    <div>
+        <p th:text="${opiekun.imie}"></p>
+        <p th:text="${opiekun.nazwisko}"></p>
+        <p>Numer telefonu</p>
+        <p th:text="${opiekun.nrTel}"></p>
+        <img th:src="@{${opiekun.AdresUrlCzlowiek}}" class="opiekun">
+    </div>
+    </center>
 
 </body>
 </html>

@@ -10,85 +10,88 @@
     <img src="https://i.pinimg.com/564x/4b/55/0e/4b550ed0f77e4681a2d3d5c778b1d0f3.jpg" class="Logo-left">
 
     <center>
-        <a href="/logowaniemain" class="powrót">Powrót na stronę główną</a>
+        <a href="/" class="powrót">Powrót na stronę główną</a>
         <a href="/adminHome" class="powrót">Powrót na stronę główną dla admina</a>
     </center>
     <header>
         <span class="title"></span>
     </header>
 
-    <h3>Informacje o zwierzątku:</h3>
+    <h1 class="naglowek">Informacje o zwierzątku:</h1>
+    <div class="zwierzeinfo">
     Imie:
-    <label th:text="${zwierze.imie}"></label>
+    <label th:text="${zwierze.imie}" class="text"></label>
     <p></p>
     Gatunek:
-    <label th:text="${zwierze.Gatunek}"></label>
+    <label th:text="${zwierze.Gatunek}"class="text"></label>
     <p></p>
     Rasa:
-    <label th:text="${zwierze.getRasa()}"></label>
+    <label th:text="${zwierze.getRasa()}"class="text"></label>
     <p></p>
     Umaszczenie:
-    <label th:text="${zwierze.getUmaszczenie()}"></label>
+    <label th:text="${zwierze.getUmaszczenie()}"class="text"></label>
     <p></p>
     Wielkosc:
-    <label th:text="${zwierze.getWielkosc()}"></label>
+    <label th:text="${zwierze.getWielkosc()}"class="text"></label>
     <p></p>
     Płeć:
-    <label th:text="${zwierze.getPlec()}"></label>
+    <label th:text="${zwierze.getPlec()}"class="text"></label>
     <p></p>
     Czy do adopcji:
-    <label th:text="${zwierze.CzyDoAdopcji}"></label>
+    <label th:text="${zwierze.CzyDoAdopcji}"class="text"></label>
     <p></p>
     Czy akceptuje dzieci:
-    <label th:text="${zwierze.CzyDzieci}"></label>
+    <label th:text="${zwierze.CzyDzieci}"class="text"></label>
     <p></p>
     Czy akceptuje koty:
-    <label th:text="${zwierze.CzyKoty}"></label>
+    <label th:text="${zwierze.CzyKoty}"class="text"></label>
     <p></p>
     Czy akceptuje psy:
-    <label th:text="${zwierze.CzyPsy}"></label>
+    <label th:text="${zwierze.CzyPsy}"class="text"></label>
     <p></p>
     Numer kojca:
-    <label th:text="${zwierze.getNrKojca()}"></label>
+    <label th:text="${zwierze.getNrKojca()}"class="text"></label>
+    <p></p>
+    </div>
+
+
+    <img th:src="@{${zwierze.AdresUrl1}}" class="zdjecie1">
+    <p></p>
+    <img th:src="@{${zwierze.AdresUrl2}}" class="zdjecie2">
+    <p></p>
+    <img th:src="@{${zwierze.AdresUrl3}}" class="zdjecie3">
     <p></p>
 
 
-    <img th:src="@{${zwierze.AdresUrl1}}">
-    <p></p>
-    <img th:src="@{${zwierze.AdresUrl2}}">
-    <p></p>
-    <img th:src="@{${zwierze.AdresUrl3}}">
-    <p></p>
-
-
-    <h1>Informacje o zdrowiu:</h1>
+    <h1 class="naglowek">Informacje o zdrowiu:</h1>
+    <center>
+    <div>
     Czy szczepiony:
-    <label th:text="${zdrowie.czySczepiony}"></label>
+    <label th:text="${zdrowie.czySczepiony}"class="text"></label>
     <p></p>
     Choroby:
-    <label :text="${zdrowie.choroby}"></label>
+    <label :text="${zdrowie.choroby}"class="text"></label>
     <p></p>
     Leki:
-    <label th:text="${zdrowie.leki}"></label>
+    <label th:text="${zdrowie.leki}"class="text"></label>
     <p></p>
+    </div>
+    </center>
 
-
-    <h3>Informacje o opiekunie:</h3>
-    <p>Imie</p>
-    <label th:text="${opiekun.imie}"></label>
-    <p></p>
-    <p>Nazwisko</p>
-    <label th:text="${opiekun.nazwisko}"></label>
-    <p></p>
-    <p>Numer telefonu</p>
-    <label th:text="${opiekun.nrTel}"></label>
-    <p></p>
-    <img th:src="@{${opiekun.AdresUrlCzlowiek}}">
-
+    <center>
+    <h1 class="naglowek">Informacje o opiekunie:</h1>
+    <div>
+        <p th:text="${opiekun.imie}"></p>
+        <p th:text="${opiekun.nazwisko}"></p>
+        <p>Numer telefonu</p>
+        <p th:text="${opiekun.nrTel}"></p>
+        <img th:src="@{${opiekun.AdresUrlCzlowiek}}" class="opiekun">
+    </div>
+    </center>
 
     <form th:action="@{/usun}" method="post">
         <input type="hidden" th:name="id" th:value="${zwierze.id}" />
-        <button type="submit">Usuń</button>
+        <button type="submit">Usuń zwierzę</button>
     </form>
 
 </body>
