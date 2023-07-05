@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <title>schronisko</title>
-  <!-- /src/main/resources/static -->
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
@@ -17,6 +16,7 @@
   <header>
       <span class="title"></span>
   </header>
+
   <div th:each="zwierze:${zwierzeList}">
     <p th:text="${zwierze.imie}"></p>
     <form action="/zwierze" method="get">

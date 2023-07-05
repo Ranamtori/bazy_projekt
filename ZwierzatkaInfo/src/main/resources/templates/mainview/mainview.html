@@ -29,7 +29,8 @@
     <label>Gatunek</label>
     <input type="text" name="Gatunek" >
     <label>Plec</label>
-    <select name="Plec" required>
+    <select name="Plec">
+        <option value="">Wybierz</option>
         <option value="samiec">Samiec</option>
         <option value="samica">Samica</option>
     </select>
@@ -39,27 +40,32 @@
     <input type="text" name="Rasa" >
     <label>Wielkosc</label>
     <select name="Wielkosc" >
+        <option value="">Wybierz</option>
         <option value="maly">mały</option>
         <option value="sredni">średni</option>
         <option value="duży">duży</option>
     </select>
     <label>Czy do adopcji</label>
     <select name="CzyDoAdopcji" >
+        <option value="">Wybierz</option>
         <option value="true">Tak</option>
         <option value="false">Nie</option>
     </select>
     <label>Czy akceptuje psy</label>
     <select name="CzyPsy" >
+        <option value="">Wybierz</option>
         <option value="true">Tak</option>
         <option value="false">Nie</option>
     </select>
     <label>Czy akceptuje koty</label>
     <select name="CzyKoty" >
+        <option value="">Wybierz</option>
         <option value="true">Tak</option>
         <option value="false">Nie</option>
     </select>
     <label>Czy akceptuje dzieci</label>
     <select name="CzyDzieci" >
+        <option value="">Wybierz</option>
         <option value="true">Tak</option>
         <option value="false">Nie</option>
     </select>
@@ -69,13 +75,15 @@
 
 <h1>Poznaj naszych opiekunów: </h1>
 <center>
-<div th:each="opiekun:${opiekunList}">
-    <p th:text="${opiekun.imie}"></p>
-    <p th:text="${opiekun.nazwisko}"></p>
+<div th:each="opiekun:${opiekunList}" class="opiekunowie">
+    <p th:text="${opiekun.imie}" class="info"></p>
+    <p th:text="${opiekun.nazwisko}" class="info"></p>
     <p>Numer telefonu</p>
     <p th:text="${opiekun.nrTel}"></p>
     <p>Liczba zwierząt pod opieką:</p>
     <p th:text="${opiekun.iloscPodOpieka}"></p>
+    <p>Lata doświadczenia:</p>
+    <p th:text="${opiekun.doswiadczenie}"></p>
     <img th:src="@{${opiekun.AdresUrlCzlowiek}}" class="opiekun">
 </div>
 </center>

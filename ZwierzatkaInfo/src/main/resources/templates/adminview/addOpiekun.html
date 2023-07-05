@@ -17,9 +17,9 @@
         <span class="title"></span>
     </header>
     <h1>Wybierz opiekuna zwierzaka:</h1>
-    <div th:each="opiekun:${opiekunList}">
-        <p th:text="${opiekun.imie}"></p>
-        <p th:text="${opiekun.nazwisko}"></p>
+    <div th:each="opiekun:${opiekunList}"  class="opiekunowie">
+        <p th:text="${opiekun.imie}" class="info"></p>
+        <p th:text="${opiekun.nazwisko}" class="info"></p>
         <p>Ilosc zwierzat pod opieka:</p>
         <p th:text="${opiekun.iloscPodOpieka}"></p>
         <img th:src="@{${opiekun.AdresUrlCzlowiek}}" class="opiekun">

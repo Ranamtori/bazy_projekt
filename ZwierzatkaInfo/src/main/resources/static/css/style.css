@@ -208,4 +208,16 @@ header{
           border-radius: 10px;
           padding: 10px;
           margin-left: auto;
+           font-size: 20px;
        }
+
+       .opiekunowie {
+           display: inline-block;
+       }
+
+       .info {
+          background-color: #ba8b5b;
+          border-radius: 10px;
+          padding: 10px;
+       }
+

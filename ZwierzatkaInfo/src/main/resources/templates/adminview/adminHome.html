@@ -40,6 +40,7 @@
         <input type="text" name="Gatunek" required>
         <label>Plec</label>
         <select name="Plec" required>
+            <option value="">Wybierz</option>
             <option value="samiec">Samiec</option>
             <option value="samica">Samica</option>
         </select>
@@ -49,29 +50,34 @@
         <input type="text" name="Rasa" required>
         <label>Wielkosc</label>
         <select name="Wielkosc" required>
+            <option value="">Wybierz</option>
             <option value="maly">mały</option>
             <option value="sredni">średni</option>
             <option value="duży">duży</option>
         </select>
         <label>Czy do adopcji</label>
         <select name="CzyDoAdopcji" required>
-            <option value="true">Tak</option>
-            <option value="false">Nie</option>
+            <option value="">Wybierz</option>
+            <option value="Tak">Tak</option>
+            <option value="Nie">Nie</option>
         </select>
         <label>Czy akceptuje psy</label>
         <select name="CzyPsy" required>
-            <option value="true">Tak</option>
-            <option value="false">Nie</option>
+            <option value="">Wybierz</option>
+            <option value="Tak">Tak</option>
+            <option value="Nie">Nie</option>
         </select>
         <label>Czy akceptuje koty</label>
         <select name="CzyKoty" required>
-            <option value="true">Tak</option>
-            <option value="false">Nie</option>
+            <option value="">Wybierz</option>
+            <option value="Tak">Tak</option>
+            <option value="Nie">Nie</option>
         </select>
         <label>Czy akceptuje dzieci</label>
         <select name="CzyDzieci" required>
-            <option value="true">Tak</option>
-            <option value="false">Nie</option>
+            <option value="">Wybierz</option>
+            <option value="Tak">Tak</option>
+            <option value="Nie">Nie</option>
         </select>
         <label>Zdjęcie1</label>
         <input type="text" name="AdresUrl1" required>
@@ -100,13 +106,18 @@
 
     <h1>Opiekunowie: </h1>
     <center>
-        <div th:each="opiekun:${opiekunList}">
-            <p th:text="${opiekun.imie}"></p>
-            <p th:text="${opiekun.nazwisko}"></p>
+        <div th:each="opiekun:${opiekunList}"  class="opiekunowie">
+            <p th:text="${opiekun.imie}" class="info"></p>
+            <p th:text="${opiekun.nazwisko}" class="info"></p>
             <p>Numer telefonu</p>
             <p th:text="${opiekun.nrTel}"></p>
             <p>Liczba zwierząt pod opieką:</p>
             <p th:text="${opiekun.iloscPodOpieka}"></p>
+            <div th:each="zwierze:${opiekun.Zwierzeta}">
+                <p th:text="${zwierze.imie}"></p>
+            </div>
+            <p>Lata doświadczenia:</p>
+            <p th:text="${opiekun.doswiadczenie}"></p>
             <img th:src="@{${opiekun.AdresUrlCzlowiek}}" class="opiekun">
             <form th:action="@{/usunOpiekun}" method="post">
                 <input type="hidden" th:name="idOpiekuna" th:value="${opiekun.IdOpiekuna}" />
