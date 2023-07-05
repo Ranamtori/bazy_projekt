@@ -12,8 +12,12 @@ h2{
     margin-right: 175px;
     text-align: center;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 60px;
     padding: 10px;
+}
+
+.logo {
+    font-family: "ZP Absolute Boundaries"; /* Ustawienie rodzaju czcionki */
 }
 
 div{
