@@ -25,6 +25,9 @@
     Gatunek:
     <label th:text="${zwierze.Gatunek}"class="text"></label>
     <p></p>
+        Wiek
+        <label th:text="${zwierze.Wiek}"class="text"></label>
+        <p></p>
     Rasa:
     <label th:text="${zwierze.getRasa()}"class="text"></label>
     <p></p>
@@ -51,6 +54,9 @@
     <p></p>
     Numer kojca:
     <label th:text="${zwierze.getNrKojca()}"class="text"></label>
+        <p></p>
+    Opis
+    <label th:text="${zwierze.opis}"class="text"></label>
     <p></p>
         <form th:action="@{/zwierzeAdminEdycja}" method="GET">
             <input type="hidden" th:name="id" th:value="${zwierze.id}" />

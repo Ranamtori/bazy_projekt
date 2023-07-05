@@ -24,6 +24,8 @@
         <input type="text" name="Imie" th:value="${zwierze.getImie() ?: 'Wartość domyślna'}" required>
         <label>NrKojca</label>
         <input type="text" name="NrKojca" th:value="${zwierze.getNrKojca() ?: 'Wartość domyślna'}"required>
+        <label>Wiek</label>
+        <input type="text" name="Wiek" th:value="${zwierze.getWiek() ?: 'Wartość domyślna'}"required>
         <label>Gatunek</label>
         <input type="text" name="Gatunek" th:value="${zwierze.getGatunek() ?: 'Wartość domyślna'}"required>
         <label>Plec</label>
@@ -53,7 +55,12 @@
             <option value="Tak" th:selected="${zwierze.getCzyPsy() == 'Tak'}">Tak</option>
             <option value="Nie" th:selected="${zwierze.getCzyPsy() == 'Nie'}">Nie</option>
         </select>
-
+        <label>Zdjecie1</label>
+        <input type="text" name="AdresUrl1" th:value="${zwierze.getAdresUrl1() ?: 'Wartość domyślna'}"required>
+        <label>Zdjecie2</label>
+        <input type="text" name="AdresUrl2" th:value="${zwierze.getAdresUrl2() ?: 'Wartość domyślna'}"required>
+        <label>Zdjecie3</label>
+        <input type="text" name="AdresUrl3" th:value="${zwierze.getAdresUrl3() ?: 'Wartość domyślna'}"required>
         <label>Czy akceptuje koty</label>
         <select name="CzyKoty" required>
             <option value="" th:selected="${zwierze.getCzyKoty() == null}">Wybierz</option>
@@ -74,6 +81,8 @@
         <input type="text" name="Choroby" th:value="${zdrowie.getChoroby() ?: 'Wartość domyślna'}"required>
         <label>Leki</label>
         <input type="text" name="Leki" th:value="${zdrowie.getLeki() ?: 'Wartość domyślna'}"required>
+        <label>Opis</label>
+        <input type="text" name="Opis" th:value="${zwierze.getOpis() ?: 'Wartość domyślna'}" required>
         <input type="hidden" th:name="id" th:value="${zwierze.id}" />
         <button type="submit">Zapisz</button>
     </form>

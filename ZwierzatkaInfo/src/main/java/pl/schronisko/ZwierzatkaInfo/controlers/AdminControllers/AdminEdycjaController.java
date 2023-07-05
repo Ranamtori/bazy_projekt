@@ -61,6 +61,11 @@ public class AdminEdycjaController {
         z1.setRasa(zwierze.getRasa());
         z1.setUmaszczenie(zwierze.getUmaszczenie());
         z1.setWielkosc(zwierze.getWielkosc());
+        z1.setAdresUrl1(zwierze.getAdresUrl1());
+        z1.setAdresUrl2(zwierze.getAdresUrl2());
+        z1.setAdresUrl3(zwierze.getAdresUrl3());
+        z1.setWiek(zwierze.getWiek());
+        z1.setOpis(zwierze.getOpis());
         zwierzeRepository.save(z1);
         model.addAttribute("zwierze",z1);
 
