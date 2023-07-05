@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<h2 style="color:saddlebrown;">Informacje na temat wybranego zwierzęcia</h2>
+<img src="https://i.pinimg.com/564x/4b/55/0e/4b550ed0f77e4681a2d3d5c778b1d0f3.jpg" class="Logo-left">
+
+<center>
+    <a href="/" class="powrót">Powrót na stronę główną</a>
+    <a href="/adminHome" class="powrót">Powrót na stronę główną dla admina</a>
+</center>
+<header>
+    <span class="title"></span>
+</header>
+
+<h1 class="naglowek">Informacje o zwierzątku - edytowanie:</h1>
+<div class="zwierzeinfo">
+    <form th:action="@{/adminEdycja}" method="post">
+        <label>Imie</label>
+        <input type="text" name="Imie" th:value="${zwierze.getImie() ?: 'Wartość domyślna'}" required>
+        <label>NrKojca</label>
+        <input type="text" name="NrKojca" th:value="${zwierze.getNrKojca() ?: 'Wartość domyślna'}"required>
+        <label>Gatunek</label>
+        <input type="text" name="Gatunek" th:value="${zwierze.getGatunek() ?: 'Wartość domyślna'}"required>
+        <label>Plec</label>
+        <select name="Plec" required>
+            <option value="Samiec" th:selected="${zwierze.getPlec() == 'Samiec'}">Samiec</option>
+            <option value="Samica" th:selected="${zwierze.getPlec() == 'Samica'}">Samica</option>
+        </select>
+        <label>Umaszczenie</label>
+        <input type="text" name="Umaszczenie" th:value="${zwierze.getUmaszczenie() ?: 'Wartość domyślna'}"required>
+        <label>Rasa</label>
+        <input type="text" name="Rasa" th:value="${zwierze.getRasa() ?: 'Wartość domyślna'}"required>
+        <label>Wielkosc</label>
+        <select name="Wielkosc" required>
+            <option value="mały" th:selected="${zwierze.getWielkosc() == 'mały'}">mały</option>
+            <option value="średni" th:selected="${zwierze.getWielkosc() == 'średni'}">średni</option>
+            <option value="duży" th:selected="${zwierze.getWielkosc() == 'duży'}">duży</option>
+        </select>
+        <label>Czy do adopcji</label>
+        <select name="CzyDoAdopcji" required>
+            <option value="" th:selected="${zwierze.getCzyDoAdopcji() == null}">Wybierz</option>
+            <option value="Tak" th:selected="${zwierze.getCzyDoAdopcji() == 'Tak'}">Tak</option>
+            <option value="Nie" th:selected="${zwierze.getCzyDoAdopcji() == 'Nie'}">Nie</option>
+        </select>
+        <label>Czy akceptuje psy</label>
+        <select name="CzyPsy" required>
+            <option value="" th:selected="${zwierze.getCzyPsy() == null}">Wybierz</option>
+            <option value="Tak" th:selected="${zwierze.getCzyPsy() == 'Tak'}">Tak</option>
+            <option value="Nie" th:selected="${zwierze.getCzyPsy() == 'Nie'}">Nie</option>
+        </select>
+
+        <label>Czy akceptuje koty</label>
+        <select name="CzyKoty" required>
+            <option value="" th:selected="${zwierze.getCzyKoty() == null}">Wybierz</option>
+            <option value="Tak" th:selected="${zwierze.getCzyKoty() == 'Tak'}">Tak</option>
+            <option value="Nie" th:selected="${zwierze.getCzyKoty() == 'Nie'}">Nie</option>
+        </select>
+
+        <label>Czy akceptuje dzieci</label>
+        <select name="CzyDzieci" required>
+            <option value="" th:selected="${zwierze.getCzyDzieci() == null}">Wybierz</option>
+            <option value="Tak" th:selected="${zwierze.getCzyDzieci() == 'Tak'}">Tak</option>
+            <option value="Nie" th:selected="${zwierze.getCzyDzieci() == 'Nie'}">Nie</option>
+        </select>
+
+        <label>CzySzczepiony:</label>
+        <input type="text" name="CzySczepiony" th:value="${zdrowie.getCzySczepiony() ?: 'Wartość domyślna'}"required>
+        <label>Choroby:</label>
+        <input type="text" name="Choroby" th:value="${zdrowie.getChoroby() ?: 'Wartość domyślna'}"required>
+        <label>Leki</label>
+        <input type="text" name="Leki" th:value="${zdrowie.getLeki() ?: 'Wartość domyślna'}"required>
+        <input type="hidden" th:name="id" th:value="${zwierze.id}" />
+        <button type="submit">Zapisz</button>
+    </form>
+</div>
+
+
+
+</body>
+</html>
