@@ -170,7 +170,7 @@ header{
 
       .zdjecie1 {
            position: absolute;
-            top: 300px;
+            top: 400px;
             right: 700px;
             max-width: 400px; /* Maksymalna szerokość zdjęcia */
             max-height: 400px; /* Maksymalna szerokość zdjęcia */
@@ -180,7 +180,7 @@ header{
 
       .zdjecie2 {
            position: absolute;
-            top: 400px;
+            top: 500px;
             right: 200px;
             max-width: 400px; /* Maksymalna szerokość zdjęcia */
             max-height: 400px; /* Maksymalna szerokość zdjęcia */
@@ -190,7 +190,7 @@ header{
 
       .zdjecie3 {
            position: absolute;
-            top: 500px;
+            top: 600px;
             right: 500px;
             max-width: 500px; /* Maksymalna szerokość zdjęcia */
             max-height: 500px; /* Maksymalna szerokość zdjęcia */
@@ -245,4 +245,10 @@ header{
             position: flex;
             margin-left: 50px;
        }
+
+           label {
+               font-size: 20px;
+           }
+
+
 
