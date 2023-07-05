@@ -36,6 +36,8 @@
         <input type="text" name="Imie" required>
         <label>NrKojca</label>
         <input type="text" name="NrKojca" required>
+        <label>Wiek</label>
+        <input type="number" name="Wiek" required>
         <label>Gatunek</label>
         <input type="text" name="Gatunek" required>
         <label>Plec</label>
@@ -79,6 +81,8 @@
             <option value="Tak">Tak</option>
             <option value="Nie">Nie</option>
         </select>
+        <label>Opis</label>
+        <input type="text" name="Opis" required>
         <label>Zdjęcie1</label>
         <input type="text" name="AdresUrl1" required>
         <label>Zdjęcie2</label>
@@ -122,6 +126,10 @@
             <form th:action="@{/usunOpiekun}" method="post">
                 <input type="hidden" th:name="idOpiekuna" th:value="${opiekun.IdOpiekuna}" />
                 <button type="submit">Usuń opiekuna</button>
+            </form>
+            <form th:action="@{/edytujOpiekun}" method="get">
+                <input type="hidden" th:name="id_opiekuna" th:value="${opiekun.IdOpiekuna}" />
+                <button type="submit">Edytuj opiekuna</button>
             </form>
         </div>
     </center>

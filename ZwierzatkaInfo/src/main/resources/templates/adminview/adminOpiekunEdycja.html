@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<h2 style="color:saddlebrown;">Informacje na temat wybranego zwierzęcia</h2>
+<img src="https://i.pinimg.com/564x/4b/55/0e/4b550ed0f77e4681a2d3d5c778b1d0f3.jpg" class="Logo-left">
+
+<center>
+    <a href="/" class="powrót">Powrót na stronę główną</a>
+    <a href="/adminHome" class="powrót">Powrót na stronę główną dla admina</a>
+</center>
+<header>
+    <span class="title"></span>
+</header>
+
+<h1 class="naglowek">Informacje o opiekunie - edytowanie:</h1>
+<div class="zwierzeinfo">
+    <form th:action="@{/adminOpiekunEdycja}" method="post">
+        <label>Imie</label>
+        <input type="text" name="Imie" th:value="${opiekun.getImie() ?: 'Wartość domyślna'}"required>
+        <label>Nazwisko</label>
+        <input type="text" name="Nazwisko" th:value="${opiekun.getNazwisko() ?: 'Wartość domyślna'}"required>
+        <label>Numer telefonu</label>
+        <input type="text" name="NrTel" th:value="${opiekun.getNrTel() ?: 'Wartość domyślna'}"required>
+        <label>Lata doświadczenia:</label>
+        <input type="number" name="Doswiadczenie" th:value="${opiekun.getDoswiadczenie() ?: 'Wartość domyślna'}" required>
+        <label>Zdjęcie</label>
+        <input type="text" name="AdresUrlCzlowiek" th:value="${opiekun.getAdresUrlCzlowiek() ?: 'Wartość domyślna'}">
+        <input type="hidden" th:name="id_opiekuna" th:value="${opiekun.idOpiekuna}" />
+        <button type="submit">Zapisz</button>
+    </form>
+</div>
+
+
+
+</body>
+</html>

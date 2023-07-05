@@ -19,6 +19,7 @@ public class Zwierze {
     private Long id;
     private String Imie;
     private String NrKojca;
+    private String Wiek;
     private String Gatunek;//pies/kot
     private String Plec;//k/m
     private String Rasa;
@@ -28,6 +29,7 @@ public class Zwierze {
     private String CzyPsy; //czy moze zyc zpsami
     private String CzyKoty;
     private String CzyDzieci;
+    private String Opis;
     private String AdresUrl1;
     private String AdresUrl2;
     private String AdresUrl3;
